@@ -133,7 +133,7 @@
 					</div>
 					<div class="w-px h-6" style="background-color: #e2e8f0;"></div>
 					<div class="text-xs font-medium uppercase" style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; color: #718096;">
-						Próximamente 2025
+						Próximamente Q4 2025
 					</div>
 				</div>
 				
