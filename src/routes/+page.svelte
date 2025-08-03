@@ -82,11 +82,11 @@
 	</script>
 </svelte:head>
 
-<div class="min-h-screen relative"
+<div class="min-h-screen lg:h-screen relative flex flex-col"
      style="background: linear-gradient(135deg, #fafcff 0%, #fefffe 50%, #fafcff 100%);"
 >
 
-	<main class="relative z-10 lg:flex lg:items-center lg:justify-center px-4 sm:px-6 lg:px-8 py-8 lg:py-4 lg:min-h-[calc(100vh-120px)]">
+	<main class="relative z-10 flex-1 lg:flex lg:items-center lg:justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-8 lg:py-4 lg:min-h-0 overflow-y-auto">
 		<div class="max-w-4xl mx-auto text-center w-full">
 			
 			<div class="space-y-6 sm:space-y-8 lg:space-y-8">
@@ -170,8 +170,8 @@
 		</div>
 	</main>
 
-	<!-- Under construction status - Fixed at bottom -->
-	<footer class="relative z-10 px-4 sm:px-6 lg:px-8 pb-8">
+	<!-- Under construction status - Fixed at bottom -->  
+	<footer class="relative z-10 lg:flex-shrink-0 px-4 sm:px-6 lg:px-8 pb-8">
 		<div class="max-w-2xl mx-auto">
 			<div class="rounded-3xl p-4 lg:p-4"
 			     style="background: #fafcff; border: 1px solid #e2e8f0; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
