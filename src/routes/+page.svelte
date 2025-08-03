@@ -110,15 +110,4 @@
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 	}
-
-	@keyframes float {
-		0%, 100% { transform: translateY(0px) rotate(0deg); }
-		25% { transform: translateY(-10px) rotate(1deg); }
-		50% { transform: translateY(-20px) rotate(0deg); }
-		75% { transform: translateY(-10px) rotate(-1deg); }
-	}
-
-	.animate-float {
-		animation: float ease-in-out infinite;
-	}
 </style>
