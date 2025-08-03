@@ -85,14 +85,43 @@
 					</p>
 				</div>
 
-				<!-- CTA -->
-				<div class="space-y-3 sm:space-y-4 px-4">
-					<button class="bg-stone-900 text-stone-50 px-8 sm:px-10 py-3 sm:py-4 font-medium hover:bg-stone-800 transition-colors text-sm sm:text-base w-full sm:w-auto">
-						Quiero estar al día
-					</button>
-					<div class="flex items-center justify-center space-x-2 text-stone-400 text-xs sm:text-sm px-2">
-						<div class="w-2 h-2 bg-blue-500 rounded-full animate-pulse flex-shrink-0"></div>
-						<span class="text-center leading-tight">Armando la base de datos más completa</span>
+				<!-- Under construction status -->
+				<div class="space-y-6 px-4">
+					<div class="relative">
+						<!-- Gradient line -->
+						<div class="h-px bg-gradient-to-r from-transparent via-stone-300 to-transparent mb-6"></div>
+						
+						<!-- Status indicator -->
+						<div class="flex items-center justify-center space-x-4">
+							<div class="flex items-center space-x-2">
+								<div class="relative">
+									<div class="w-3 h-3 bg-emerald-500 rounded-full animate-pulse"></div>
+									<div class="absolute inset-0 w-3 h-3 bg-emerald-400 rounded-full animate-ping opacity-75"></div>
+								</div>
+								<span class="text-stone-600 font-medium text-sm tracking-wide">En desarrollo</span>
+							</div>
+							<div class="w-px h-6 bg-stone-300"></div>
+							<div class="text-stone-500 text-xs tracking-wider uppercase">
+								Próximamente 2025
+							</div>
+						</div>
+						
+						<!-- Progress visualization -->
+						<div class="mt-6 max-w-xs mx-auto">
+							<div class="flex items-center justify-center space-x-1">
+								{#each Array(5) as _, i}
+									<div class="h-1 w-8 rounded-full bg-stone-200">
+										<div 
+											class="h-full rounded-full bg-gradient-to-r from-emerald-400 to-stone-400 transition-all duration-1000"
+											style="width: {i < 3 ? '100%' : i === 3 ? '60%' : '0%'};"
+										></div>
+									</div>
+								{/each}
+							</div>
+							<p class="text-center text-xs text-stone-400 mt-3 tracking-wide">
+								Creando experiencias únicas
+							</p>
+						</div>
 					</div>
 				</div>
 
