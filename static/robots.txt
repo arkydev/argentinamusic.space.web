@@ -1,3 +1,9 @@
-# allow crawling everything by default
 User-agent: *
-Disallow:
+Allow: /
+
+Sitemap: https://argentinamusicspace.com/sitemap.xml
+
+# Block common bot paths that aren't needed
+Disallow: /api/
+Disallow: /_app/
+Disallow: /admin/

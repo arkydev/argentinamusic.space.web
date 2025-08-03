@@ -22,8 +22,64 @@
 </script>
 
 <svelte:head>
-	<title>Argentina Music Space</title>
-	<meta name="description" content="Plataforma de descubrimiento musical para Argentina" />
+	<title>Argentina Music Space - Descubrí Conciertos, Festivales y Música en Argentina</title>
+	<meta name="description" content="Descubrí toda la escena musical argentina: conciertos, festivales, artistas y precios de entradas en Buenos Aires, Córdoba, Rosario y más ciudades. Rock, jazz, folklore, tango y todos los géneros." />
+	<meta name="keywords" content="conciertos Argentina, festivales música Argentina, música Buenos Aires, shows Córdoba, eventos musicales Rosario, rock argentino, jazz Argentina, folklore, tango, música en vivo" />
+	<meta name="author" content="Argentina Music Space" />
+	<meta name="robots" content="index, follow" />
+	<meta property="og:title" content="Argentina Music Space - Descubrí toda la música argentina" />
+	<meta property="og:description" content="La plataforma completa para descubrir conciertos, festivales y artistas en Argentina. Información de eventos musicales en todas las ciudades principales." />
+	<meta property="og:type" content="website" />
+	<meta property="og:locale" content="es_AR" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Argentina Music Space - Descubrí toda la música argentina" />
+	<meta name="twitter:description" content="Conciertos, festivales y música en vivo en Argentina. Toda la información de eventos musicales en un solo lugar." />
+	<link rel="canonical" href="https://argentinamusicspace.com" />
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "WebSite",
+			"name": "Argentina Music Space",
+			"description": "Plataforma de descubrimiento musical para Argentina",
+			"url": "https://argentinamusicspace.com",
+			"inLanguage": "es-AR",
+			"about": {
+				"@type": "Thing",
+				"name": "Música Argentina",
+				"description": "Escena musical argentina incluyendo conciertos, festivales y artistas"
+			},
+			"audience": {
+				"@type": "Audience",
+				"geographicArea": {
+					"@type": "Country",
+					"name": "Argentina"
+				}
+			},
+			"genre": ["Rock", "Jazz", "Electrónica", "Folklore", "Tango", "Pop", "Cumbia"],
+			"areaServed": [
+				{
+					"@type": "City",
+					"name": "Buenos Aires",
+					"addressCountry": "AR"
+				},
+				{
+					"@type": "City", 
+					"name": "Córdoba",
+					"addressCountry": "AR"
+				},
+				{
+					"@type": "City",
+					"name": "Rosario", 
+					"addressCountry": "AR"
+				},
+				{
+					"@type": "City",
+					"name": "Mendoza",
+					"addressCountry": "AR"
+				}
+			]
+		}
+	</script>
 </svelte:head>
 
 <div class="min-h-screen relative"
@@ -55,25 +111,25 @@
 				</div>
 
 				<!-- What we aggregate -->
-				<div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-4 text-center px-4">
+				<section class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-4 text-center px-4" aria-label="Servicios de aggregación musical">
 					{#each [
 						{ title: 'Conciertos', desc: 'Fechas y venues', bg: '#f0f9ff', border: '#e0f2fe' },
 						{ title: 'Festivales', desc: 'Lineups completos', bg: '#fefce8', border: '#fef3c7' },
 						{ title: 'Artistas', desc: 'Tours y shows', bg: '#f0fdf4', border: '#dcfce7' },
 						{ title: 'Precios', desc: 'Info de entradas', bg: '#fdf2f8', border: '#fce7f3' }
 					] as item}
-						<div class="rounded-3xl p-3 sm:p-4 lg:p-4 space-y-1 sm:space-y-2 transition-all duration-300 hover:shadow-lg hover:scale-102"
+						<article class="rounded-3xl p-3 sm:p-4 lg:p-4 space-y-1 sm:space-y-2 transition-all duration-300 hover:shadow-lg hover:scale-102"
 						     style="background: {item.bg}; border: 1px solid {item.border}; box-shadow: 0 2px 6px rgba(0,0,0,0.06);">
 							<h3 class="font-medium text-sm sm:text-base"
 							    style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; color: #2d3748;">{item.title}</h3>
 							<p class="text-xs sm:text-sm leading-tight"
 							   style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; color: #718096;">{item.desc}</p>
-						</div>
+						</article>
 					{/each}
-				</div>
+				</section>
 
 				<!-- Music genres -->
-				<div class="space-y-3 sm:space-y-4 lg:space-y-3 px-4">
+				<section class="space-y-3 sm:space-y-4 lg:space-y-3 px-4" aria-label="Géneros musicales">
 					<div class="flex flex-wrap justify-center gap-x-3 sm:gap-x-4 lg:gap-x-4 gap-y-2 text-sm sm:text-base">
 						{#each [
 							{ name: 'Rock', bg: '#fef2f2', color: '#991b1b' },
@@ -88,10 +144,10 @@
 							      style="background: {genre.bg}; color: {genre.color}; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border: 1px solid rgba(0,0,0,0.05);">{genre.name}</span>
 						{/each}
 					</div>
-				</div>
+				</section>
 
 				<!-- Coverage -->
-				<div class="px-4">
+				<section class="px-4" aria-label="Ciudades cubiertas">
 					<div class="flex flex-wrap justify-center gap-x-3 sm:gap-x-4 lg:gap-x-4 gap-y-2 text-xs sm:text-sm">
 						{#each [
 							{ name: 'Buenos Aires', bg: '#e6f3ff', color: '#2d3748' },
@@ -107,7 +163,7 @@
 							      style="background: {city.bg}; color: {city.color}; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border: 1px solid rgba(0,0,0,0.05);">{city.name}</span>
 						{/each}
 					</div>
-				</div>
+				</section>
 
 			</div>
 
