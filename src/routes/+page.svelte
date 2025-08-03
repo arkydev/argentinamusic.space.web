@@ -26,22 +26,22 @@
 	<meta name="description" content="Plataforma de descubrimiento musical para Argentina" />
 </svelte:head>
 
-<div class="h-screen bg-stone-50 relative overflow-hidden">
+<div class="min-h-screen bg-stone-50 relative">
 	<!-- Subtle noise texture -->
 	<div class="absolute inset-0 opacity-[0.03]" style="background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxmaWx0ZXIgaWQ9Im5vaXNlIj4KICAgICAgPGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdW5jeT0iMC45IiBudW1PY3RhdmVzPSI0IiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+CiAgICA8L2ZpbHRlcj4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsdGVyPSJ1cmwoI25vaXNlKSIgb3BhY2l0eT0iMC4xIi8+Cjwvc3ZnPgo=')"></div>
 
-	<main class="relative z-10 min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+	<main class="relative z-10 lg:min-h-screen lg:flex lg:items-center lg:justify-center px-4 sm:px-6 lg:px-8 py-8 lg:py-8">
 		<div class="max-w-4xl mx-auto text-center w-full">
 			
-			<div class="space-y-12 sm:space-y-16 lg:space-y-20">
+			<div class="space-y-8 sm:space-y-12 lg:space-y-20">
 				
 				<!-- Brand & core message -->
-				<div class="space-y-6 sm:space-y-8">
+				<div class="space-y-4 sm:space-y-6">
 					<h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-stone-900 tracking-tight leading-tight">
 						Argentina Music
 					</h1>
 					
-					<div class="space-y-4 sm:space-y-6">
+					<div class="space-y-3 sm:space-y-4">
 						<h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light text-stone-800 leading-tight px-4">
 							<span class="text-stone-900 font-medium border-b-2 border-stone-300">
 								{actions[currentAction].verb}
@@ -71,7 +71,7 @@
 				</div>
 
 				<!-- Coverage -->
-				<div class="space-y-4 sm:space-y-6 px-4">
+				<div class="space-y-3 sm:space-y-4 px-4">
 					<h3 class="text-base sm:text-lg font-medium text-stone-800">
 						Cubrimos todo el territorio
 					</h3>
@@ -86,10 +86,10 @@
 				</div>
 
 				<!-- Under construction status -->
-				<div class="space-y-6 px-4">
+				<div class="space-y-4 px-4">
 					<div class="relative">
 						<!-- Gradient line -->
-						<div class="h-px bg-gradient-to-r from-transparent via-stone-300 to-transparent mb-6"></div>
+						<div class="h-px bg-gradient-to-r from-transparent via-stone-300 to-transparent mb-4"></div>
 						
 						<!-- Status indicator -->
 						<div class="flex items-center justify-center space-x-4">
@@ -107,7 +107,7 @@
 						</div>
 						
 						<!-- Progress visualization -->
-						<div class="mt-6 max-w-xs mx-auto">
+						<div class="mt-4 max-w-xs mx-auto">
 							<div class="flex items-center justify-center space-x-1">
 								{#each Array(5) as _, i}
 									<div class="h-1 w-8 rounded-full bg-stone-200">
