@@ -26,9 +26,9 @@
 	<meta name="description" content="Plataforma de descubrimiento musical para Argentina" />
 </svelte:head>
 
-<div class="min-h-screen bg-stone-50 relative">
-	<!-- Subtle noise texture -->
-	<div class="absolute inset-0 opacity-[0.03]" style="background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxmaWx0ZXIgaWQ9Im5vaXNlIj4KICAgICAgPGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdW5jeT0iMC45IiBudW1PY3RhdmVzPSI0IiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+CiAgICA8L2ZpbHRlcj4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsdGVyPSJ1cmwoI25vaXNlKSIgb3BhY2l0eT0iMC4xIi8+Cjwvc3ZnPgo=')"></div>
+<div class="min-h-screen bg-gray-50 relative"
+     style="background-color: #fefbff;"
+>
 
 	<main class="relative z-10 lg:min-h-screen lg:flex lg:items-center lg:justify-center px-4 sm:px-6 lg:px-8 py-8 lg:py-8">
 		<div class="max-w-4xl mx-auto text-center w-full">
@@ -37,19 +37,22 @@
 				
 				<!-- Brand & core message -->
 				<div class="space-y-4 sm:space-y-6">
-					<h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-stone-900 tracking-tight leading-tight">
+					<h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal tracking-tight leading-tight"
+					    style="font-family: 'Roboto', sans-serif; color: #1c1b1f;">
 						Argentina Music
 					</h1>
 					
 					<div class="space-y-3 sm:space-y-4">
-						<h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light text-stone-800 leading-tight px-4">
-							<span class="text-stone-900 font-medium border-b-2 border-stone-300">
+						<h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light leading-tight px-4"
+						    style="font-family: 'Roboto', sans-serif; color: #49454f;">
+							<span class="font-medium" style="color: #6750a4;">
 								{actions[currentAction].verb}
 							</span>
 							<br class="hidden sm:block">
 							<span class="sm:ml-0 ml-2">{actions[currentAction].object}</span>
 						</h2>
-						<p class="text-lg sm:text-xl text-stone-600 leading-relaxed max-w-2xl mx-auto px-4">
+						<p class="text-lg sm:text-xl leading-relaxed max-w-2xl mx-auto px-4"
+						   style="font-family: 'Roboto', sans-serif; color: #73777a;">
 							Reunimos toda la información musical del país: fechas, lugares, artistas y precios
 						</p>
 					</div>
@@ -63,45 +66,52 @@
 						{ title: 'Artistas', desc: 'Tours y shows' },
 						{ title: 'Precios', desc: 'Info de entradas' }
 					] as item}
-						<div class="space-y-2 sm:space-y-3">
-							<h3 class="font-medium text-stone-900 text-sm sm:text-base">{item.title}</h3>
-							<p class="text-xs sm:text-sm text-stone-600 leading-tight">{item.desc}</p>
+						<div class="rounded-3xl p-4 sm:p-6 space-y-2 sm:space-y-3 transition-all duration-300 hover:shadow-lg"
+						     style="background-color: #f7f2fa; border: 1px solid #e6e0e9;">
+							<h3 class="font-medium text-sm sm:text-base"
+							    style="font-family: 'Roboto', sans-serif; color: #1c1b1f;">{item.title}</h3>
+							<p class="text-xs sm:text-sm leading-tight"
+							   style="font-family: 'Roboto', sans-serif; color: #49454f;">{item.desc}</p>
 						</div>
 					{/each}
 				</div>
 
 				<!-- Coverage -->
 				<div class="space-y-3 sm:space-y-4 px-4">
-					<h3 class="text-base sm:text-lg font-medium text-stone-800">
-						Cubrimos todo el territorio
+					<h3 class="text-base sm:text-lg font-medium"
+					    style="font-family: 'Roboto', sans-serif; color: #1c1b1f;">
+						Cubrimos todo el país
 					</h3>
-					<div class="flex flex-wrap justify-center gap-x-4 sm:gap-x-6 lg:gap-x-8 gap-y-2 text-stone-600 text-xs sm:text-sm">
+					<div class="flex flex-wrap justify-center gap-x-3 sm:gap-x-4 lg:gap-x-6 gap-y-2 text-xs sm:text-sm">
 						{#each ['Buenos Aires', 'Córdoba', 'Rosario', 'Mendoza', 'La Plata', 'Bariloche', 'Tucumán', 'Mar del Plata'] as city}
-							<span class="whitespace-nowrap">{city}</span>
+							<span class="whitespace-nowrap px-3 py-1 rounded-full font-medium"
+							      style="background-color: #e8def8; color: #1c1b1f; font-family: 'Roboto', sans-serif;">{city}</span>
 						{/each}
 					</div>
-					<p class="text-xs text-stone-500 leading-relaxed px-2">
+					<p class="text-xs leading-relaxed px-2"
+					   style="font-family: 'Roboto', sans-serif; color: #73777a;">
 						Rock • Jazz • Electrónica • Folklore • Tango • Pop • Cumbia • y más
 					</p>
 				</div>
 
 				<!-- Under construction status -->
 				<div class="space-y-4 px-4">
-					<div class="relative">
+					<div class="rounded-3xl p-6"
+					     style="background-color: #f7f2fa; border: 1px solid #e6e0e9;">
 						<!-- Gradient line -->
-						<div class="h-px bg-gradient-to-r from-transparent via-stone-300 to-transparent mb-4"></div>
+						<div class="h-px mb-4" style="background: linear-gradient(to right, transparent, #6750a4, transparent);"></div>
 						
 						<!-- Status indicator -->
 						<div class="flex items-center justify-center space-x-4">
 							<div class="flex items-center space-x-2">
 								<div class="relative">
-									<div class="w-3 h-3 bg-emerald-500 rounded-full animate-pulse"></div>
-									<div class="absolute inset-0 w-3 h-3 bg-emerald-400 rounded-full animate-ping opacity-75"></div>
+									<div class="w-3 h-3 rounded-full animate-pulse" style="background-color: #6750a4;"></div>
+									<div class="absolute inset-0 w-3 h-3 rounded-full animate-ping opacity-75" style="background-color: #6750a4;"></div>
 								</div>
-								<span class="text-stone-600 font-medium text-sm tracking-wide">En desarrollo</span>
+								<span class="font-medium text-sm" style="font-family: 'Roboto', sans-serif; color: #1c1b1f;">En desarrollo</span>
 							</div>
-							<div class="w-px h-6 bg-stone-300"></div>
-							<div class="text-stone-500 text-xs tracking-wider uppercase">
+							<div class="w-px h-6" style="background-color: #cac4d0;"></div>
+							<div class="text-xs font-medium uppercase" style="font-family: 'Roboto', sans-serif; color: #49454f;">
 								Próximamente 2025
 							</div>
 						</div>
@@ -110,15 +120,15 @@
 						<div class="mt-4 max-w-xs mx-auto">
 							<div class="flex items-center justify-center space-x-1">
 								{#each Array(5) as _, i}
-									<div class="h-1 w-8 rounded-full bg-stone-200">
+									<div class="h-1 w-8 rounded-full" style="background-color: #e6e0e9;">
 										<div 
-											class="h-full rounded-full bg-gradient-to-r from-emerald-400 to-stone-400 transition-all duration-1000"
-											style="width: {i < 3 ? '100%' : i === 3 ? '60%' : '0%'};"
+											class="h-full rounded-full transition-all duration-1000"
+											style="background-color: #6750a4; width: {i < 3 ? '100%' : i === 3 ? '60%' : '0%'};"
 										></div>
 									</div>
 								{/each}
 							</div>
-							<p class="text-center text-xs text-stone-400 mt-3 tracking-wide">
+							<p class="text-center text-xs mt-3" style="font-family: 'Roboto', sans-serif; color: #73777a;">
 								Creando experiencias únicas
 							</p>
 						</div>
@@ -132,10 +142,10 @@
 </div>
 
 <style>
-	@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 	
 	:global(body) {
-		font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+		font-family: 'Roboto', sans-serif;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 	}
