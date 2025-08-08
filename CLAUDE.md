@@ -66,3 +66,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Spanish content** with "Argentina Music" as brand name (kept in English)
 - **Mobile-first responsive design** with careful attention to small screens
 - **Single viewport page** - no scrolling required on desktop
+
+## Git Commit Guidelines
+
+- Use conventional commits format: `type(scope): description`
+- Use 50/72 rule
+- Keep commit messages clean and focused on code changes only
+- NEVER add co-authors, "Generated with" tags, or other metadata
+- Use separate commits for different file types/purposes:
+  - Scripts/automation: `feat:` or `fix:`
+  - Documentation: `docs:`
+  - Configuration: `fix:` or `refactor:`
+- Focus on what changed and why, not who or how it was generated
