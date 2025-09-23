@@ -23,6 +23,11 @@ jobs:
       with:
         fetch-depth: 0
 
+    - name: Verify pnpm-lock.yaml exists
+      run: |
+        ls -la pnpm-lock.yaml
+        head -5 pnpm-lock.yaml
+
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v3
 
