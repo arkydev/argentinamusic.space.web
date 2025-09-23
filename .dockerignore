@@ -93,5 +93,6 @@ Dockerfile
 
 # Kubernetes
 k8s/
-*.yaml
-*.yml
+# Only ignore k8s yaml files, not pnpm-lock.yaml
+k8s/*.yaml
+k8s/*.yml
