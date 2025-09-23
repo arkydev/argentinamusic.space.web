@@ -5,27 +5,27 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Development Commands
 
 ### Package Manager
-- This project uses **bun** as the package manager (bun.lock present)
-- Install dependencies: `bun install`
+- This project uses **npm** as the package manager (standard Node.js project)
+- Install dependencies: `npm install`
 
 ### Development
-- Start dev server: `bun run dev`
-- Start with browser: `bun run dev -- --open`
-- Type checking: `bun run check` or `bun run check:watch`
+- Start dev server: `npm run dev`
+- Start with browser: `npm run dev -- --open`
+- Type checking: `npm run check` or `npm run check:watch`
 
 ### Testing
-- Run all tests: `bun run test`
-- Unit tests only: `bun run test:unit`
-- E2E tests only: `bun run test:e2e`
-- Unit tests in watch mode: `bun run test:unit`
+- Run all tests: `npm run test`
+- Unit tests only: `npm run test:unit`
+- E2E tests only: `npm run test:e2e`
+- Unit tests in watch mode: `npm run test:unit`
 
 ### Code Quality
-- Format code: `bun run format`
-- Lint and format check: `bun run lint`
+- Format code: `npm run format`
+- Lint and format check: `npm run lint`
 
 ### Build
-- Production build: `bun run build`
-- Preview build: `bun run preview`
+- Production build: `npm run build`
+- Preview build: `npm run preview`
 
 ## Project Architecture
 
@@ -53,6 +53,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Styling**: TailwindCSS classes with custom noise texture background
 - **Responsiveness**: Uses sm/md/lg breakpoints with careful mobile optimization
 - **State management**: Svelte 5 `$state` runes for reactive content rotation
+- **Analytics**: Integrated analytics tracking script in `src/app.html`
 
 ### Design Principles
 - **Clean, minimal aesthetic** inspired by SF startup design
@@ -66,6 +67,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Spanish content** with "Argentina Music" as brand name (kept in English)
 - **Mobile-first responsive design** with careful attention to small screens
 - **Single viewport page** - no scrolling required on desktop
+- **Inter font** loaded from Google Fonts for typography consistency
+- **SEO optimized** with structured data for search engines
+
+## Testing Configuration
+- **Unit tests**: Vitest with Svelte 5 support
+- **E2E tests**: Playwright for browser testing
+- **Type checking**: svelte-check with TypeScript
+- **Linting**: ESLint with Svelte plugin
 
 ## Git Commit Guidelines
 
