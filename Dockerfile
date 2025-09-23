@@ -18,37 +18,17 @@ COPY . .
 # Build the application
 RUN pnpm run build
 
-# Production stage - ultra small nginx
+# Production stage - minimal nginx
 FROM nginx:alpine
 
-# Remove default nginx config
-RUN rm /etc/nginx/conf.d/default.conf
-
-# Copy nginx config
+# Copy nginx config (replaces default)
 COPY nginx.conf /etc/nginx/nginx.conf
 
 # Copy built files
 COPY --from=builder /app/build /usr/share/nginx/html
 
-# Create non-root nginx user
-RUN addgroup -g 1001 -S nginx && \
-    adduser -S nginx -u 1001 -G nginx
-
-# Set proper permissions
-RUN chown -R nginx:nginx /usr/share/nginx/html && \
-    chown -R nginx:nginx /var/cache/nginx && \
-    chown -R nginx:nginx /var/log/nginx && \
-    chown -R nginx:nginx /etc/nginx/conf.d
-
-# Create nginx runtime directories
-RUN touch /var/run/nginx.pid && \
-    chown -R nginx:nginx /var/run/nginx.pid
-
 # Expose port
 EXPOSE 8080
 
-# Use non-root user
-USER nginx
-
-# Start nginx
+# Start nginx (runs as nginx user by default in Alpine)
 CMD ["nginx", "-g", "daemon off;"]
