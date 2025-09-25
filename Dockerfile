@@ -15,7 +15,7 @@ RUN pnpm build
 
 FROM nginx:alpine-slim
 
-COPY --from=builder /app/dist /usr/share/nginx/html
+COPY --from=builder /app/build /usr/share/nginx/html
 
 RUN echo 'server { \
     listen 80; \
